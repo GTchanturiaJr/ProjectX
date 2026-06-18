@@ -3,7 +3,7 @@
   import { supabase } from '$lib/config/supabase';
   import { Button, Card, DataTable, Modal, Input, Select, Badge } from '$lib/components/ui';
   import { addToast } from '$lib/stores/toast';
-  import { Plus, Pencil, Trash, AlertCircle, CheckCircle } from 'lucide-svelte';
+  import { Plus, Pencil, Trash, CircleAlert as AlertCircle, CircleCheck as CheckCircle } from 'lucide-svelte';
   import type { SEOSetting, Page } from '$lib/types';
 
   let settings: SEOSetting[] = [];
