@@ -3,11 +3,7 @@
   import { userRoles, isAdmin } from '$lib/stores/auth';
   import { hasPermission } from '$lib/utils/permissions';
   import { ThemeToggle } from '$lib/components/ui';
-  import {
-    LayoutDashboard, FileText, Image, Users, Shield, Search, Settings,
-    ClipboardList, FormInput, Newspaper, ShoppingBag, Database, LogOut,
-    Menu, ChevronRight, ChevronLeft, Navigation, Rows3
-  } from 'lucide-svelte';
+  import { LayoutDashboard, FileText, Image, Users, Shield, Search, Settings, ClipboardList, FolderInput as FormInput, Newspaper, ShoppingBag, Database, LogOut, Menu, ChevronRight, ChevronLeft, Navigation, Rows3 } from 'lucide-svelte';
   import type { PermissionName } from '$lib/types';
 
   let { collapsed = false }: { collapsed?: boolean } = $props();

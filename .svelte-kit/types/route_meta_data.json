@@ -1,0 +1,39 @@
+{
+	"/": [
+		"src/routes/+page.server.ts"
+	],
+	"/admin": [],
+	"/admin/blog": [],
+	"/admin/dashboard": [],
+	"/admin/database": [],
+	"/admin/footer": [],
+	"/admin/forms": [],
+	"/admin/login": [],
+	"/admin/logs": [],
+	"/admin/media": [],
+	"/admin/navigation": [],
+	"/admin/pages": [],
+	"/admin/pages/[id]": [],
+	"/admin/roles": [],
+	"/admin/seo": [],
+	"/admin/settings": [],
+	"/admin/users": [],
+	"/api/robots.txt": [
+		"src/routes/api/robots.txt/+server.ts"
+	],
+	"/api/sitemap.xml": [
+		"src/routes/api/sitemap.xml/+server.ts"
+	],
+	"/blog": [
+		"src/routes/blog/+page.server.ts"
+	],
+	"/blog/[slug]": [
+		"src/routes/blog/[slug]/+page.server.ts"
+	],
+	"/contact": [
+		"src/routes/contact/+page.server.ts"
+	],
+	"/[slug]": [
+		"src/routes/[slug]/+page.server.ts"
+	]
+}

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { fade } from 'svelte/transition';
-  import { X, CheckCircle, AlertCircle, AlertTriangle, Info } from 'lucide-svelte';
+  import { X, CircleCheck as CheckCircle, CircleAlert as AlertCircle, TriangleAlert as AlertTriangle, Info } from 'lucide-svelte';
   import { toasts, removeToast } from '$lib/stores/toast';
 
   const icons = {

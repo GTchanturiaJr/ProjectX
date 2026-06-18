@@ -1,7 +1,7 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte';
   import { fade, scale } from 'svelte/transition';
-  import { AlertTriangle } from 'lucide-svelte';
+  import { TriangleAlert as AlertTriangle } from 'lucide-svelte';
   import Button from './Button.svelte';
 
   let {
