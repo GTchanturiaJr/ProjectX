@@ -4,14 +4,14 @@
   import { Menu, X } from 'lucide-svelte';
   import type { NavigationItem } from '$lib/types';
 
-  let items: NavigationItem[] = [];
-  let mobileOpen = false;
+  let items: NavigationItem[] = $state([]);
+  let mobileOpen = $state(false);
 
   onMount(async () => {
     const { data: m } = await supabase.from('navigation_menus').select('id').eq('location', 'navbar').single();
     if (m) {
       const { data: i } = await supabase.from('navigation_items').select('*').eq('menu_id', m.id).eq('visible', true).order('sort_order');
-      items = i as NavigationItem[] ?? [];
+      items = (i as NavigationItem[]) ?? [];
     }
   });
 </script>
@@ -30,7 +30,7 @@
       {/each}
     </div>
 
-    <button on:click={() => mobileOpen = !mobileOpen} class="rounded-md p-2 text-gray-600 md:hidden dark:text-gray-400">
+    <button onclick={() => mobileOpen = !mobileOpen} class="rounded-md p-2 text-gray-600 md:hidden dark:text-gray-400">
       {#if mobileOpen}
         <X class="h-6 w-6" />
       {:else}
@@ -42,7 +42,7 @@
   {#if mobileOpen}
     <div class="border-t border-gray-200 bg-white px-4 py-4 dark:border-gray-700 dark:bg-gray-900 md:hidden">
       {#each items as item}
-        <a href={item.url} class="block py-2 text-sm font-medium text-gray-600 dark:text-gray-400" on:click={() => mobileOpen = false}>
+        <a href={item.url} class="block py-2 text-sm font-medium text-gray-600 dark:text-gray-400" onclick={() => mobileOpen = false}>
           {item.label}
         </a>
       {/each}
