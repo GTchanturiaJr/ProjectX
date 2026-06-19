@@ -40,6 +40,8 @@
 declare module '$env/static/private' {
 	export const SUPABASE_URL: string;
 	export const SUPABASE_SERVICE_ROLE_KEY: string;
+	export const VITE_SUPABASE_ANON_KEY: string;
+	export const VITE_SUPABASE_URL: string;
 	export const COLORTERM: string;
 	export const TERM: string;
 	export const LSCOLORS: string;
@@ -173,6 +175,8 @@ declare module '$env/dynamic/private' {
 	export const env: {
 		SUPABASE_URL: string;
 		SUPABASE_SERVICE_ROLE_KEY: string;
+		VITE_SUPABASE_ANON_KEY: string;
+		VITE_SUPABASE_URL: string;
 		COLORTERM: string;
 		TERM: string;
 		LSCOLORS: string;
